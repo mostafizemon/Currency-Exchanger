@@ -17,6 +17,7 @@ class CurrencyExchanger extends StatelessWidget {
         body: Obx(() => screens[_currentIndex.value]),
         bottomNavigationBar: Obx(() {
           return BottomNavigationBar(
+            backgroundColor: Colors.white,
             onTap: (index) {
               _currentIndex.value = index;
             },
