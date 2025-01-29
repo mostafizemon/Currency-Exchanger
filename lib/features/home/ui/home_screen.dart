@@ -48,21 +48,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: SizedBox(
+            child: Container(
               height: 50,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: CountryPickerDropdown(
-                  initialValue: 'US',
-                  itemBuilder: _buildDropdownItem,
-                  onValuePicked: (country) {
-                    updateCurrency(country?.currencyCode ?? "USD");
-                  },
-                ),
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: CountryPickerDropdown(
+                initialValue: 'US',
+                itemBuilder: _buildDropdownItem,
+                onValuePicked: (country) {
+                  updateCurrency(country?.currencyCode ?? "USD");
+                },
               ),
             ),
           ),
